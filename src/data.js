@@ -21,10 +21,10 @@ export const order = [
 	{name:"documentNumber", input:"{{order.documentNumber}}", output:"12 - ORD:GB/ALA", example:"Return order doc number ", status:false,  module:"order"},
 	{name:"endDate", input:"{{order.endDate}}", output:"1753-01-01T00:00:00Z", example:"Return order end date ", status:false,  module:"order"},
 	{name:"invoiceRunCodeRef", input:"{{order.invoiceRunCodeRef}}", output:"00000000-0000-0000-0000-000000000000", example:"Return order invoice run code ref ", status:false,  module:"order"},
-	{name:"invoicedFlag", input:"{{order.invoicedFlag}}", output:"true/false, module: ", example:"Return whether order was invoiced or not ", status:false,  module:"order"},
+	{name:"invoicedFlag", input:"{{order.invoicedFlag}}", output:"true/false ", example:"Return whether order was invoiced or not ", status:false,  module:"order"},
 	{name:"invoicedUptoDate", input:"{{order.invoicedUptoDate}}", output:"2023-12-14T23:59:00Z", example:"Return order invoiced up to ", status:false,  module:"order"},
 	{name:"noOfItems", input:"{{order.noOfItems}}", output:1, example:"Return order number of items ", status:false, module:"order"},
-	{name:"openEndedFlag", input:"{{order.openEndedFlag}}", output:"true/false, module: ", example:"Return whether order is open ended or not  ", status:false,  module:"order"},
+	{name:"openEndedFlag", input:"{{order.openEndedFlag}}", output:"true/false ", example:"Return whether order is open ended or not  ", status:false,  module:"order"},
 	{name:"orderDate", input:"{{order.orderDate}}", output:"2023-12-13T14:45:00Z", example:"Return order date ", status:false,  module:"order"},
 	{name:"orderedBy", input:"{{order.orderedBy}}", output:"John Cash", example:"Return order ordered by who ", status:false,  module:"order"},
 	{name:"ownerUserEmail", input:"{{order.ownerUserEmail}}", output:"alan.da.silva.souza@current-rms.com", example:"Return order owner email ", status:false,  module:"order"},
@@ -80,7 +80,7 @@ export const order = [
 
 	/* order.orderCollectionPlace */
 	
-	{name:"activeFlag", input:"{{order.orderCollectionPlace.activeFlag}}", output:"true/false, module: ", example:"Return whether or not order collection place is active", status:false, module:"orderCollectionPlace" },
+	{name:"activeFlag", input:"{{order.orderCollectionPlace.activeFlag}}", output:"true/false ", example:"Return whether or not order collection place is active", status:false, module:"orderCollectionPlace" },
 	{name:"address1", input:"{{order.orderCollectionPlace.address1}}", output:"99, Brightmoor Street", example:"Return order collection place address", status:false, module:"orderCollectionPlace" },
 	{name:"address2", input:"{{order.orderCollectionPlace.address2}}", output:"", example:"Return order collection place address", status:false, module:"orderCollectionPlace" },
 	{name:"city", input:"{{order.orderCollectionPlace.city}}", output:"Nottingham", example:"Return order collection place city", status:false, module:"orderCollectionPlace" },
