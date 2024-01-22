@@ -398,6 +398,153 @@ export const order = [
 		{name:"totalWeekends", input:"{{item.totalWeekends}}", output:1, example:"Return item total weekends", status:false, module:"purchaseOrderItems"},
 		{name:"totalWeeks", input:"{{item.totalWeeks}}", output:1, example:"Return item total weeks", status:false, module:"purchaseOrderItems"},
 		{name:"zeroPricedFlag", input:"{{item.zeroPricedFlag}}", output:"true/false", example:"Return whether or not the item is zero priced ", status:false, module:"purchaseOrderItems"},
+
+		/* delivery note*/
+
+{name:"createUserFullName", input:"{{delivery.createUserFullName}}", output:"Alan Souza", example:"Return name of who created the Delivery Note", status:false, module:"delivery"},
+{name:"deliveryDate", input:"{{delivery.deliveryDate}}", output:"2023-12-22T10:16:00Z", example:"Return delivery date ", status:false, module:"delivery"},
+{name:"documentNumber", input:"{{delivery.documentNumber}}", output:"DN23", example:"Return delivery document number", status:false, module:"delivery"},
+{name:"reference", input:"{{delivery.reference}}", output:"", example:"Return delivery reference", status:false, module:"delivery"},
+{name:"signatureDate", input:"{{delivery.signatureDate}}", output:"2023-12-22T10:16:00Z", example:"Return delivery signature Date", status:false, module:"delivery"},
+{name:"signatureLinkExpiry", input:"{{delivery.signatureLinkExpiry}}", output:"2023-12-22T10:16:00Z", example:"Return delivery signature link expiry date", status:false, module:"delivery"},
+{name:"signatureSignedBy", input:"{{delivery.signatureSignedBy}}", output:" Alan Souza", example:"Return who signed the delivery note", status:false, module:"delivery"},
+
+/* delivery items */
+
+{name:"activeFlag", input:"{{item.activeFlag}}", output:"true/false", example:"Return whether delivery item is active or not", status:false, module:"deliveryDeliveryItems"},
+{name:"orderItemStockMethod", input:"{{item.orderItemStockMethod}}", output:"2", example:"", status:false, module:"deliveryDeliveryItems"},
+{name:"orderItemStockType", input:"{{item.orderItemStockType}}", output:"1", example:"", status:false, module:"deliveryDeliveryItems"},
+{name:"orderItemType", input:"{{item.orderItemType}}", output:"1", example:"", status:false, module:"deliveryDeliveryItems"},
+{name:"quantity", input:"{{item.quantity}}", output:"1", example:"Return delivery item quantity ", status:false, module:"deliveryDeliveryItems"},
+{name:"rentalOrderItemItemName", input:"{{item.rentalOrderItemItemName}}", output:"Hammer Drill", example:"Return delivery item name ", status:false, module:"deliveryDeliveryItems"},
+{name:"stockLevelItemNumber", input:"{{item.stockLevelItemNumber}}", output:"HM001", example:"Return delivery item stock level number", status:false, module:"deliveryDeliveryItems"},
+
+/* delivery rental Order */
+	
+{name:"accountEmail", input:"{{delivery.rentalOrder.accountEmail}}", output:"hello@insphire.com", example:"Return order account email", status:false,  module:"deliveryRentalOrder"},
+{name:"accountName", input:"{{delivery.rentalOrder.accountName}}", output:"inspHire Ltd", example:"Return order account name ", status:false, module:"deliveryRentalOrder"},
+{name:"billingAddressString", input:"{{delivery.rentalOrder.billingAddressString}}", output:"inspHire Ltd, Unit 5, Chase Park, Daleside Road, Nottingham, Nottinghamshire, United Kingdom, NG2 4GT", example:"Return order full billing address", status:false, module:"deliveryRentalOrder"},
+{name:"billingPlaceName", input:"{{delivery.rentalOrder.billingPlaceName}}", output:"inspHire Ltd", example:"Return order billing place name ", status:false, module:"deliveryRentalOrder"},
+{name:"chargingEndDate", input:"{{delivery.rentalOrder.chargingEndDate}}", output:"2023-12-17T17:00:00Z", example:"Return order charging end date ", status:false,  module:"deliveryRentalOrder"},
+{name:"chargingStartDate", input:"{{delivery.rentalOrder.chargingStartDate}}", output:"2023-12-13T09:00:00Z", example:"Return order charging start date", status:false,  module:"deliveryRentalOrder"},
+{name:"collectionAddressString", input:"{{delivery.rentalOrder.collectionAddressString}}", output:"99,  Street, Nottingham, England, United Kingdom, NG9 9FD", example:"Return order full collection address ", status:false,  module:"deliveryRentalOrder"},
+{name:"collectionPlaceName", input:"{{delivery.rentalOrder.collectionPlaceName}}", output:"House", example:"Return order collection place name ", status:false,  module:"deliveryRentalOrder"},
+{name:"contactName", input:"{{delivery.rentalOrder.contactName}}", output:"John Cash", example:"Return order contact name ", status:false,  module:"deliveryRentalOrder"},
+{name:"createDate", input:"{{delivery.rentalOrder.createDate}}", output:"2023-12-13T14:58:16.296297Z", example:"Return order create date ", status:false,  module:"deliveryRentalOrder"},
+{name:"currencySymbol", input:"{{delivery.rentalOrder.currencySymbol}}", output:"£", example:"Return order currency symbol ", status:false,  module:"deliveryRentalOrder"},
+{name:"customerReference", input:"{{delivery.rentalOrder.customerReference}}", output:"Customer Ref: 1234", example:"Return order customer ref  ", status:false,  module:"deliveryRentalOrder"},
+{name:"deliveryAddressString", input:"{{delivery.rentalOrder.deliveryAddressString}}", output:"99,  Street, Nottingham, England, United Kingdom, NG9 9FD", example:"Return order full delivery address ", status:false,  module:"deliveryRentalOrder"},
+{name:"deliveryPlaceName", input:"{{delivery.rentalOrder.deliveryPlaceName}}", output:"House", example:"Return order delivery place name ", status:false,  module:"deliveryRentalOrder"},
+{name:"depotName", input:"{{delivery.rentalOrder.depotName}}", output:"Alan Store", example:"Return order depot name ", status:false, module:"deliveryRentalOrder"},
+{name:"documentNumber", input:"{{delivery.rentalOrder.documentNumber}}", output:"12 - ORD:GB/ALA", example:"Return order doc number ", status:false,  module:"deliveryRentalOrder"},
+{name:"endDate", input:"{{delivery.rentalOrder.endDate}}", output:"1753-01-01T00:00:00Z", example:"Return order end date ", status:false,  module:"deliveryRentalOrder"},
+{name:"invoiceRunCodeRef", input:"{{delivery.rentalOrder.invoiceRunCodeRef}}", output:"00000000-0000-0000-0000-000000000000", example:"Return order invoice run code ref ", status:false,  module:"deliveryRentalOrder"},
+{name:"invoicedFlag", input:"{{delivery.rentalOrder.invoicedFlag}}", output:"true/false ", example:"Return whether order was invoiced or not ", status:false,  module:"deliveryRentalOrder"},
+{name:"invoicedUptoDate", input:"{{delivery.rentalOrder.invoicedUptoDate}}", output:"2023-12-14T23:59:00Z", example:"Return order invoiced up to ", status:false,  module:"deliveryRentalOrder"},
+{name:"noOfItems", input:"{{delivery.rentalOrder.noOfItems}}", output:1, example:"Return order number of items ", status:false, module:"deliveryRentalOrder"},
+{name:"openEndedFlag", input:"{{delivery.rentalOrder.openEndedFlag}}", output:"true/false ", example:"Return whether order is open ended or not  ", status:false,  module:"deliveryRentalOrder"},
+{name:"date", input:"{{delivery.rentalOrder.date}}", output:"2023-12-13T14:45:00Z", example:"Return order date ", status:false,  module:"deliveryRentalOrder"},
+{name:"orderedBy", input:"{{delivery.rentalOrder.orderedBy}}", output:"John Cash", example:"Return order ordered by who ", status:false,  module:"deliveryRentalOrder"},
+{name:"ownerUserEmail", input:"{{delivery.rentalOrder.ownerUserEmail}}", output:"alan.da.silva.souza@current-rms.com", example:"Return order owner email ", status:false,  module:"deliveryRentalOrder"},
+{name:"ownerUserFullName", input:"{{delivery.rentalOrder.ownerUserFullName}}", output:"Alan Souza", example:"Return order owner name ", status:false,  module:"deliveryRentalOrder"},
+{name:"paymentTermName", input:"{{delivery.rentalOrder.paymentTermName}}", output:"30 Days", example:"Return order payment term ", status:false,  module:"deliveryRentalOrder"},
+{name:"projectName", input:"{{delivery.rentalOrder.projectName}}", output:"Project Big", example:"Return order project name ", status:false,  module:"deliveryRentalOrder"},
+{name:"rentalLength", input:"{{delivery.rentalOrder.rentalLength}}", output:5, example:"Return order time period ", status:false, module:"deliveryRentalOrder"},
+{name:"salesPerson", input:"{{delivery.rentalOrder.salesPerson}}", output:"Will Smith", example:"Return order sales person ", status:false,  module:"deliveryRentalOrder"},
+{name:"startDate", input:"{{delivery.rentalOrder.startDate}}", output:"2023-12-13T09:00:00Z", example:"Return order start date ", status:false,  module:"deliveryRentalOrder"},
+{name:"state", input:"{{delivery.rentalOrder.state}}", output:"deliveryRentalOrder", example:"Return order state", status:false, module:"deliveryRentalOrder"},
+{name:"status", input:"{{delivery.rentalOrder.status}}", output:"Active", example:"Return order status ", status:false,  module:"deliveryRentalOrder"},
+{name:"supplierTotalCharge", input:"{{delivery.rentalOrder.supplierTotalCharge}}", output:0, example:"Return order supplier total charge without tax", status:false, module:"deliveryRentalOrder"},
+{name:"supplierTotalChargeIncludingTax", input:"{{delivery.rentalOrder.supplierTotalChargeIncludingTax}}", output:0, example:"Return order supplier total charge inc tax ", status:false,  module:"deliveryRentalOrder"},
+{name:"supplierTotalTax", input:"{{delivery.rentalOrder.supplierTotalTax}}", output:0, example:"Return order supplier total tax ", status:false,  module:"deliveryRentalOrder"},
+{name:"timeZone", input:"{{delivery.rentalOrder.timeZone}}", output:"Europe/London", example:"Return order time zone ", status:false,  module:"deliveryRentalOrder"},
+{name:"timeZoneName", input:"{{delivery.rentalOrder.timeZoneName}}", output:"(+00:00) Europe/London", example:"Return order time zone name ", status:false,  module:"deliveryRentalOrder"},
+{name:"totalCharge", input:"{{delivery.rentalOrder.totalCharge}}", output:20, example:"Return order total charge without tax", status:false, module:"deliveryRentalOrder"},
+{name:"totalChargeIncludingTax", input:"{{delivery.rentalOrder.totalChargeIncludingTax}}", output:24, example:"Return order total charge inc tax ", status:false,  module:"deliveryRentalOrder"},
+{name:"totalInvoiced", input:"{{delivery.rentalOrder.totalInvoiced}}", output:12, example:"Return order total invoiced ", status:false,  module:"deliveryRentalOrder"},
+{name:"totalRental", input:"{{delivery.rentalOrder.totalRental}}", output:20, example:"Return order  total rental", status:false,  module:"deliveryRentalOrder"},
+{name:"totalSale", input:"{{delivery.rentalOrder.totalSale}}", output:0, example:"Return order total sale ", status:false,  module:"deliveryRentalOrder"},
+{name:"totalService", input:"{{delivery.rentalOrder.totalService}}", output:0, example:"Return order total service ", status:false,  module:"deliveryRentalOrder"},
+{name:"totalSurcharge", input:"{{delivery.rentalOrder.totalSurcharge}}", output:0, example:"Return order total surcharge ", status:false,  module:"deliveryRentalOrder"},
+{name:"totalTax", input:"{{delivery.rentalOrder.totalTax}}", output:4, example:"Return order total tax ", status:false,  module:"deliveryRentalOrder"},
+{name:"totalWeight", input:"{{delivery.rentalOrder.totalWeight}}", output:30, example:"Return order total weight ", status:false,  module:"deliveryRentalOrder"},
+{name:"weightUnitSymbol", input:"{{delivery.rentalOrder.weightUnitSymbol}}", output:"kg", example:"Return order total weight unit ", status:false, module:"deliveryRentalOrder"},
+
+/* delivery.rentalOrder.billingPlace */
+
+{name:"address1", input:"{{delivery.rentalOrder.billingPlace.address1}}", output:"inspHire Ltd", example:"Return order billing place address", status:false, module:"deliveryBillingPlace" },
+{name:"address2", input:"{{delivery.rentalOrder.billingPlace.address2}}", output:"Unit 5, Chase Park, Daleside Road", example:"Return order billing place address", status:false, module:"deliveryBillingPlace"  },
+{name:"city", input:"{{delivery.rentalOrder.billingPlace.city}}", output:"Nottingham", example:"Return order billing place city", status:false, module:"deliveryBillingPlace"  },
+{name:"countryIso", input:"{{delivery.rentalOrder.billingPlace.countryIso}}", output:"GB", example:"Return order billing place country symbol", status:false, module:"deliveryBillingPlace"  },
+{name:"countryName", input:"{{delivery.rentalOrder.billingPlace.countryName}}", output:"United Kingdom", example:"Return order billing place name", status:false, module:"deliveryBillingPlace"  },
+{name:"county", input:"{{delivery.rentalOrder.billingPlace.county}}", output:"Nottinghamshire", example:"Return order billing place county", status:false, module:"deliveryBillingPlace"  },
+{name:"email", input:"{{delivery.rentalOrder.billingPlace.email}}", output:"hello@insphire.com", example:"Return order billing place email", status:false, module: "deliveryBillingPlace" },
+{name:"fax", input:"{{delivery.rentalOrder.billingPlace.fax}}", output:"example.com", example:"Return order billing place fax", status:false, module:"deliveryBillingPlace" },
+{name:"name", input:"{{delivery.rentalOrder.billingPlace.name}}", output:"inspHire Ltd", example:"Return order billing place name", status:false, module: "deliveryBillingPlace" },
+{name:"postcode", input:"{{delivery.rentalOrder.billingPlace.postcode}}", output:"NG2 4GT", example:"Return order billing place postcode", status:false, module:"deliveryBillingPlace"  },
+{name:"telephone", input:"{{delivery.rentalOrder.billingPlace.telephone}}", output:"0115 979 3377", example:"Return order billing place telephone", status:false, module: "deliveryBillingPlace" },
+{name:"type", input:"{{delivery.rentalOrder.billingPlace.type}}", output:"Head Office", example:"Return order billing place type", status:false, module:"deliveryBillingPlace"  },
+{name:"website", input:"{{delivery.rentalOrder.billingPlace.website}}", output:"www.inspHire.com", example:"Return order billing place website", status:false, module:"deliveryBillingPlace"  },
+
+/*  delivery.rentalOrder.collectionAddress */
+
+{name:"address1", input:"{{delivery.rentalOrder.collectionAddress.address1}}", output:"99, Brightmoor Street", example:"Return order collection address ", status:false, module:"deliveryCollectionAddress" },
+{name:"address2", input:"{{delivery.rentalOrder.collectionAddress.address2}}", output:"", example:"Return order collection address ", status:false, module:"deliveryCollectionAddress" },
+{name:"city", input:"{{delivery.rentalOrder.collectionAddress.city}}", output:"Nottingham", example:"Return order collection address city", status:false, module: "deliveryCollectionAddress"},
+{name:"countryIso", input:"{{delivery.rentalOrder.collectionAddress.countryIso}}", output:"GB", example:"Return order collection address country initials", status:false, module:"deliveryCollectionAddress" },
+{name:"countryName", input:"{{delivery.rentalOrder.collectionAddress.countryName}}", output:"United Kingdom", example:"Return order collection address country", status:false, module:"deliveryCollectionAddress" },
+{name:"county", input:"{{delivery.rentalOrder.collectionAddress.county}}", output:"England", example:"Return order collection address county ", status:false, module:"deliveryCollectionAddress" },
+{name:"postcode", input:"{{delivery.rentalOrder.collectionAddress.postcode}}", output:"NG9 9FD", example:"Return order collection address postcode ", status:false, module: "deliveryCollectionAddress"},
+
+/* delivery.rentalOrder.collectionPlace */
+
+{name:"activeFlag", input:"{{delivery.rentalOrder.collectionPlace.activeFlag}}", output:"true/false ", example:"Return whether or not order collection place is active", status:false, module:"deliveryCollectionPlace" },
+{name:"address1", input:"{{delivery.rentalOrder.collectionPlace.address1}}", output:"99, Brightmoor Street", example:"Return order collection place address", status:false, module:"deliveryCollectionPlace" },
+{name:"address2", input:"{{delivery.rentalOrder.collectionPlace.address2}}", output:"", example:"Return order collection place address", status:false, module:"deliveryCollectionPlace" },
+{name:"city", input:"{{delivery.rentalOrder.collectionPlace.city}}", output:"Nottingham", example:"Return order collection place city", status:false, module:"deliveryCollectionPlace" },
+{name:"countryIso", input:"{{delivery.rentalOrder.collectionPlace.countryIso}}", output:"GB", example:"Return order collection place country", status:false, module:"deliveryCollectionPlace" },
+{name:"countryName", input:"{{delivery.rentalOrder.collectionPlace.countryName}}", output:"United Kingdom", example:"Return order collection place country", status:false, module:"deliveryCollectionPlace" },
+{name:"county", input:"{{delivery.rentalOrder.collectionPlace.county}}", output:"England", example:"Return order collection place county", status:false, module: "deliveryCollectionPlace"},
+{name:"email", input:"{{delivery.rentalOrder.collectionPlace.email}}", output:"alansouzauk@gmail.com", example:"Return order collection place email", status:false, module:"deliveryCollectionPlace" },
+{name:"fax", input:"{{delivery.rentalOrder.collectionPlace.fax}}", output:"12345", example:"Return order collection place fax", status:false, module:"deliveryCollectionPlace" },
+{name:"fileLink", input:"{{delivery.rentalOrder.collectionPlace.fileLink}}", output:"https://europa-dev.s3.eu-west-1.amazonaws.com/logo", example:"Return order collection place file attached", status:false, module: "deliveryCollectionPlace"},
+{name:"name", input:"{{delivery.rentalOrder.collectionPlace.name}}", output:"House", example:"Return order collection place name", status:false, module:"deliveryCollectionPlace" },
+{name:"postcode", input:"{{delivery.rentalOrder.collectionPlace.postcode}}", output:"NG9 9FD", example:"Return order collection place postcode", status:false, module:"deliveryCollectionPlace" },
+{name:"telephone", input:"{{delivery.rentalOrder.collectionPlace.telephone}}", output:"9999999", example:"Return order collection place telephone", status:false, module: "deliveryCollectionPlace"},
+{name:"thumbLink", input:"{{delivery.rentalOrder.collectionPlace.thumbLink}}", output:"https://europa-dev.s3.eu-west-1.amazonaws.com/logo", example:"Return order collection place logo", status:false, module: "deliveryCollectionPlace"},
+{name:"type", input:"{{delivery.rentalOrder.collectionPlace.type}}", output:"Head Office", example:"Return order collection place type", status:false, module:"deliveryCollectionPlace" },
+{name:"website", input:"{{delivery.rentalOrder.collectionPlace.website}}", output:"www.alansouzauk.com", example:"Return order collection place website", status:false, module:"deliveryCollectionPlace" },
+
+/* delivery.rentalOrder.deliveryPlace */
+
+{name:"address1", input:"{{delivery.rentalOrder.deliveryPlace.address1}}", output:"inspHire Ltd", example:"Return order delivery place address", status:false, module:"deliveryDeliveryPlace" },
+{name:"address2", input:"{{delivery.rentalOrder.deliveryPlacee.address2}}", output:"Unit 5, Chase Park, Daleside Road", example:"Return order delivery place address", status:false, module:"deliveryDeliveryPlace" },
+{name:"city", input:"{{delivery.rentalOrder.deliveryPlace.city}}", output:"Nottingham", example:"Return order delivery place city", status:false, module: "deliveryDeliveryPlace"},
+{name:"countryIso", input:"{{delivery.rentalOrder.deliveryPlace.countryIso}}", output:"GB", example:"Return order delivery place country symbol", status:false, module: "deliveryDeliveryPlace"},
+{name:"countryName", input:"{{delivery.rentalOrder.deliveryPlace.countryName}}", output:"United Kingdom", example:"Return order delivery place name", status:false, module:"deliveryDeliveryPlace" },
+{name:"county", input:"{{delivery.rentalOrder.deliveryPlace.county}}", output:"Nottinghamshire", example:"Return order delivery place county", status:false, module:"deliveryDeliveryPlace" },
+{name:"email", input:"{{delivery.rentalOrder.deliveryPlace.email}}", output:"hello@insphire.com", example:"Return order delivery place email", status:false, module:"deliveryDeliveryPlace" },
+{name:"fax", input:"{{delivery.rentalOrder.deliveryPlace.fax}}", output:"example.com", example:"Return order delivery place fax", status:false, module:"deliveryDeliveryPlace" },
+{name:"name", input:"{{delivery.rentalOrder.deliveryPlace.name}}", output:"inspHire Ltd", example:"Return order delivery place name", status:false, module:"deliveryDeliveryPlace" },
+{name:"postcode", input:"{{delivery.rentalOrder.deliveryPlace.postcode}}", output:"NG2 4GT", example:"Return order delivery place postcode", status:false, module: "deliveryDeliveryPlace"},
+{name:"telephone", input:"{{delivery.rentalOrder.deliveryPlace.telephone}}", output:"0115 979 3377", example:"Return order delivery place telephone", status:false, module: "deliveryDeliveryPlace"},
+{name:"type", input:"{{delivery.rentalOrder.deliveryPlace.type}}", output:"Head Office", example:"Return order delivery place type", status:false, module:"deliveryDeliveryPlace" },
+{name:"website", input:"{{delivery.rentalOrder.deliveryPlace.website}}", output:"www.inspHire.com", example:"Return order delivery place website", status:false, module: "deliveryDeliveryPlace"},
+{name:"fileLink", input:"{{delivery.rentalOrder.deliveryPlace.fileLink}}", output:"https://europa-dev.s3.eu-west-1.amazonaws.com/logo", example:"Return order delivery place file attached", status:false, module: "deliveryDeliveryPlace"},
+{name:"thumbLink", input:"{{delivery.rentalOrder.deliveryPlace.thumbLink}}", output:"https://europa-dev.s3.eu-west-1.amazonaws.com/logo", example:"Return order delivery place logo", status:false, module:"deliveryDeliveryPlace" },
+
+/*  delivery.rentalOrder.deliveryAddress */
+
+{name:"address1", input:"{{delivery.rentalOrder.deliveryAddress.address1}}", output:"99, Brightmoor Street", example:"Return order delivery address ", status:false, module: "deliveryDeliveryAddress"},
+{name:"address2", input:"{{delivery.rentalOrder.deliveryAddress.address2}}", output:"", example:"Return order delivery address ", status:false, module: "deliveryDeliveryAddress"},
+{name:"city", input:"{{delivery.rentalOrder.deliveryAddress.city}}", output:"Nottingham", example:"Return order delivery address city", status:false, module: "deliveryDeliveryAddress"},
+{name:"countryIso", input:"{{delivery.rentalOrder.deliveryAddress.countryIso}}", output:"GB", example:"Return order delivery address country initials", status:false, module: "deliveryDeliveryAddress"},
+{name:"countryName", input:"{{delivery.rentalOrder.deliveryAddress.countryName}}", output:"United Kingdom", example:"Return order delivery address country", status:false, module: "deliveryDeliveryAddress"},
+{name:"county", input:"{{delivery.rentalOrder.deliveryAddress.county}}", output:"England", example:"Return order delivery address county ", status:false, module:"deliveryDeliveryAddress" },
+{name:"postcode", input:"{{delivery.rentalOrder.deliveryAddress.postcode}}", output:"NG9 9FD", example:"Return order delivery address postcode ", status:false, module:"deliveryDeliveryAddress" },
+
+
+
 	
 ]
 
@@ -421,5 +568,13 @@ export const list = [
 	{name:"PO Billing Address", value:"purchaseOrderBillingPlace"},
 	{name:"PO Delivery Address" , value:"purchaseOrderDeliveryAddress"},
 	{name:"PO Items" , value:"purchaseOrderItems"},
+	{name:"Delivery Note" , value:"delivery"},
+	{name:"Delivery Items" , value:"deliveryDeliveryItems"},
+	{name:"Delivery Note - Order" , value:"deliveryRentalOrder"},
+	{name:"Delivery Note - Billing Place" , value:"deliveryBillingPlace"},
+	{name:"Delivery Note - Collection Address" , value:"deliveryCollectionAddress"},
+	{name:"Delivery Note - Collection Place" , value:"deliveryCollectionPlace"},
+	{name:"Delivery Note - Delivery Place" , value:"deliveryDeliveryPlace"},
+	{name:"Delivery Note - Delivery Address" , value:"deliveryDeliveryAddress"},
 
 ]
